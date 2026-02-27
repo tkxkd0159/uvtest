@@ -1,6 +1,5 @@
 import os
 import sys
-import subprocess
 from playwright.sync_api import sync_playwright
 
 # 1. Force Playwright to use the local virtual environment
@@ -23,14 +22,6 @@ def main():
             print("Status: ✅ Chromium is currently installed locally!")
         else:
             print("Status: ❌ Chromium is missing. Triggering local installation...")
-
-            # 5. Install the browser using the isolated Python environment
-            subprocess.check_call(
-                [sys.executable, "-m", "playwright", "install", "chromium"]
-            )
-            print(
-                "\n✅ Installation complete! Run the command again to see the updated status."
-            )
 
     print("---------------------------------\n")
 
