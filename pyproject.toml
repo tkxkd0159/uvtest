@@ -1,0 +1,20 @@
+[project]
+name = "uvtest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jaeseung Lee", email = "41176085+tkxkd0159@users.noreply.github.com" },
+]
+requires-python = ">=3.14"
+dependencies = ["playwright>=1.58.0"]
+
+[project.scripts]
+myapp = "myapp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/myapp"]
